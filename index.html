@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SegaraArga Mountain Smart Tourism</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <img
+            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600"
+            alt="Gunung">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="badge">
+                Smart Mountain Tourism
+            </span>
+
+            <h1>
+                SegaraArga
+            </h1>
+
+            <p>
+                📍 Sentul, Bogor
+            </p>
+
+        </div>
+
+    </section>
+
+    <main class="container-app">
+
+        <!-- CAPACITY -->
+
+        <div class="dashboard-card">
+
+            <div class="flex justify-between">
+
+                <span>
+                    Kapasitas Area Camping
+                </span>
+
+                <span id="capacityText">
+                    65%
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    id="capacityBar"
+                    class="progress-fill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- WEATHER -->
+
+        <div class="dashboard-card">
+
+            <h3 class="card-title">
+                🌦 Cuaca Hari Ini
+            </h3>
+
+            <div class="weather-box">
+
+                <div>
+
+                    <h2>
+                        18°C
+                    </h2>
+
+                    <p>
+                        Berkabut Ringan
+                    </p>
+
+                </div>
+
+                <div class="weather-icon">
+                    ☁️
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- TRACK -->
+
+        <div class="dashboard-card">
+
+            <h3 class="card-title">
+                🥾 Jalur Pendakian
+            </h3>
+
+            <ul class="track-list">
+
+                <li>Pos 1 - 1 KM</li>
+                <li>Pos 2 - 2.5 KM</li>
+                <li>Pos 3 - 4 KM</li>
+                <li>Puncak - 5 KM</li>
+
+            </ul>
+
+        </div>
+
+        <!-- MENU FITUR -->
+
+        <section>
+
+            <h2 class="section-title">
+                Fasilitas Wisata
+            </h2>
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800">
+
+                    <div class="menu-overlay">
+                        <h3>Kantin</h3>
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
+
+                    <div class="menu-overlay">
+                        <h3>Camping</h3>
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800">
+
+                    <div class="menu-overlay">
+                        <h3>Porter</h3>
+                    </div>
+
+                </div>
+
+                <div class="menu-card">
+
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800">
+
+                    <div class="menu-overlay">
+                        <h3>Spot Foto</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BOOKING CAMP -->
+
+        <section>
+
+            <h2 class="section-title">
+                🏕 Booking Area Kemah
+            </h2>
+
+            <div class="booking-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200">
+
+                <div class="booking-content">
+
+                    <h3>
+                        Area Camping Bukit Pinus
+                    </h3>
+
+                    <p>
+                        Slot Tersedia :
+                        <span id="slotTersedia">
+                            24 Slot
+                        </span>
+                    </p>
+
+                    <p>
+                        Rp50.000 / malam
+                    </p>
+
+                    <button
+                        onclick="openBookingModal()"
+                        class="booking-btn">
+
+                        Booking Sekarang
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MENU MAKANAN -->
+
+        <section>
+
+            <h2 class="section-title">
+                🍜 E-Menu Digital
+            </h2>
+
+            <div id="menuContainer">
+
+            </div>
+
+        </section>
+
+        <!-- PRO -->
+
+        <div class="pro-card">
+
+            <div class="flex justify-between items-center">
+
+                <div>
+
+                    <h3>
+                        SegaraArga PRO
+                    </h3>
+
+                    <p>
+                        Offline Maps & AI Guide
+                    </p>
+
+                </div>
+
+                <span class="pro-badge">
+                    PRO
+                </span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- SOS -->
+
+    <button
+        id="panicBtn"
+        class="panic-btn">
+
+        🚨
+
+    </button>
+
+    <!-- BOOKING MODAL -->
+
+    <div
+        id="bookingModal"
+        class="modal hidden">
+
+        <div class="modal-box">
+
+            <h2>
+                Booking Area Kemah
+            </h2>
+
+            <input
+                id="namaPendaki"
+                class="form-input"
+                type="text"
+                placeholder="Nama Pendaki">
+
+            <input
+                id="tanggalBooking"
+                class="form-input"
+                type="date">
+
+            <input
+                id="jumlahOrang"
+                class="form-input"
+                type="number"
+                placeholder="Jumlah Orang">
+
+            <button
+                onclick="prosesBooking()"
+                class="upgrade-btn">
+
+                Booking via WhatsApp
+
+            </button>
+
+            <button
+                onclick="closeModal()"
+                class="close-btn">
+
+                Tutup
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SOS MODAL -->
+
+    <div
+        id="sosModal"
+        class="modal hidden">
+
+        <div class="modal-box">
+
+            <h2>
+                🚨 Bantuan Darurat
+            </h2>
+
+            <button class="modal-btn red">
+                Hubungi Ranger
+            </button>
+
+            <button class="modal-btn blue">
+                Peta Lokasi
+            </button>
+
+            <button class="modal-btn green">
+                Pos P3K
+            </button>
+
+            <button
+                onclick="closeModal()"
+                class="close-btn">
+
+                Tutup
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- NAV -->
+
+    <nav class="bottom-nav">
+
+        <button>🏠</button>
+        <button>🥾</button>
+        <button>🏕</button>
+        <button>👤</button>
+
+    </nav>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

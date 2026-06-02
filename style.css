@@ -1,0 +1,612 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary:#16a34a;
+    --secondary:#22c55e;
+    --dark:#14532d;
+    --bg:#f4fdf6;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:#1f2937;
+    padding-bottom:90px;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    height:340px;
+    position:relative;
+    overflow:hidden;
+    border-radius:0 0 35px 35px;
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.25)
+    );
+}
+
+.hero-content{
+    position:absolute;
+    bottom:30px;
+    left:20px;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:2.2rem;
+    font-weight:700;
+}
+
+.hero-content p{
+    margin-top:8px;
+    opacity:.95;
+}
+
+.badge{
+    display:inline-block;
+
+    background:
+    rgba(255,255,255,.2);
+
+    backdrop-filter:blur(10px);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container-app{
+    padding:18px;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.dashboard-card{
+    background:white;
+
+    padding:20px;
+
+    border-radius:24px;
+
+    margin-top:18px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+}
+
+.card-title{
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.dashboard-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.dashboard-header p{
+    color:#6b7280;
+}
+
+.dashboard-header h2{
+    font-size:2rem;
+    color:var(--primary);
+}
+
+.safety-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-size:2rem;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--secondary),
+    var(--primary)
+    );
+}
+
+.status-safe{
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    padding:8px 15px;
+
+    border-radius:999px;
+
+    font-weight:600;
+}
+
+/* ==========================
+   WEATHER
+========================== */
+
+.weather-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.weather-box h2{
+    font-size:2rem;
+}
+
+.weather-icon{
+    font-size:3rem;
+}
+
+/* ==========================
+   TRACK
+========================== */
+
+.track-list{
+    list-style:none;
+}
+
+.track-list li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* ==========================
+   CAPACITY BAR
+========================== */
+
+.progress{
+    width:100%;
+    height:14px;
+
+    background:#e5e7eb;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-top:15px;
+}
+
+.progress-fill{
+    width:65%;
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--primary)
+    );
+
+    transition:.5s;
+}
+
+/* ==========================
+   MENU GRID
+========================== */
+
+.section-title{
+    margin:25px 0 15px;
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.menu-card{
+    position:relative;
+    height:180px;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.1);
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+
+.menu-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.menu-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:15px;
+
+    background:
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,.8)
+    );
+}
+
+.menu-overlay h3{
+    color:white;
+    font-size:1rem;
+}
+
+/* ==========================
+   BOOKING
+========================== */
+
+.booking-card{
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.booking-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.booking-content{
+    padding:20px;
+}
+
+.booking-content h3{
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+.booking-content p{
+    margin-bottom:8px;
+}
+
+.booking-btn{
+    width:100%;
+
+    margin-top:15px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    135deg,
+    var(--secondary),
+    var(--primary)
+    );
+}
+
+/* ==========================
+   E-MENU
+========================== */
+
+.food-card{
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.06);
+}
+
+.food-card:hover{
+    transform:translateY(-3px);
+}
+
+.food-card img{
+    width:80px;
+    height:80px;
+
+    border-radius:15px;
+
+    object-fit:cover;
+}
+
+.food-card h4{
+    margin-bottom:5px;
+}
+
+.food-price{
+    color:var(--primary);
+    font-weight:700;
+}
+
+/* ==========================
+   PRO CARD
+========================== */
+
+.pro-card{
+    margin-top:25px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #f59e0b,
+    #ea580c
+    );
+
+    color:white;
+
+    border-radius:24px;
+
+    padding:22px;
+}
+
+.pro-badge{
+    background:white;
+
+    color:#ea580c;
+
+    padding:8px 15px;
+
+    border-radius:999px;
+
+    font-weight:700;
+}
+
+/* ==========================
+   BUTTON SOS
+========================== */
+
+.panic-btn{
+    position:fixed;
+
+    right:20px;
+    bottom:90px;
+
+    width:65px;
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    font-size:1.5rem;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:#dc2626;
+
+    box-shadow:
+    0 10px 25px rgba(220,38,38,.4);
+
+    z-index:999;
+}
+
+/* ==========================
+   MODAL
+========================== */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.5);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:9999;
+}
+
+.hidden{
+    display:none;
+}
+
+.modal-box{
+    width:100%;
+    max-width:400px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+}
+
+.modal-box h2{
+    margin-bottom:15px;
+}
+
+.form-input{
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+}
+
+.modal-btn,
+.close-btn,
+.upgrade-btn{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    margin-top:10px;
+
+    cursor:pointer;
+}
+
+.red{
+    background:#dc2626;
+    color:white;
+}
+
+.blue{
+    background:#2563eb;
+    color:white;
+}
+
+.green{
+    background:#16a34a;
+    color:white;
+}
+
+.close-btn{
+    background:#e5e7eb;
+}
+
+.upgrade-btn{
+    background:var(--primary);
+    color:white;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.bottom-nav{
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:white;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    padding:15px 0;
+
+    box-shadow:
+    0 -5px 20px rgba(0,0,0,.08);
+}
+
+.bottom-nav button{
+    border:none;
+    background:none;
+
+    font-size:1.4rem;
+
+    cursor:pointer;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(min-width:768px){
+
+    .hero{
+        height:450px;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .menu-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
