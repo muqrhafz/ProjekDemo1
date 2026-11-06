@@ -1,379 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SegaraArga Mountain Smart Tourism</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Seva Luviaarta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <main class="page-shell">
+    <div class="floating-heart heart-one">♥</div>
+    <div class="floating-heart heart-two">♥</div>
+    <div class="floating-heart heart-three">♥</div>
 
-    <!-- HERO -->
+    <section class="apology-card" aria-live="polite">
+      <div class="sparkle">✦</div>
+      <p class="eyebrow">sebuah pesan dari hati</p>
+      <h1>Untuk <span>Seva Luviaarta</span></h1>
 
-    <section class="hero">
+      <div class="visual-gallery" aria-label="Visual romantis untuk Seva">
+        <figure class="visual-card">
+          <img src="images/1.jpeg" alt="Ilustrasi perempuan dikelilingi bunga pink dan ungu" />
+        </figure>
+        <figure class="visual-card">
+          <img src="images/2.jpg" alt="Kartu kosong di antara bunga mawar pink dan bunga lavender" />
+        </figure>
+      </div>
 
-        <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600"
-            alt="Gunung">
+      <div class="divider"><span>♡</span></div>
 
-        <div class="hero-overlay"></div>
+      <p class="message">
+        Seva, aku <strong>Muqri Hajid Hafuza</strong> ingin meminta maaf dengan tulus atas
+        kejadian dan kesalahan yang telah aku lakukan.
+      </p>
+      <p class="message secondary">
+        Aku sadar mungkin perbuatanku membuat kamu kurang suka, kecewa, atau bahkan
+        menyakiti perasaanmu. Aku benar-benar menyesal dan tidak bermaksud membuatmu
+        merasa seperti itu.
+      </p>
+      <p class="promise">
+        Aku akan berusaha belajar dari kesalahan ini, memperbaiki sikap, dan lebih
+        menghargai perasaanmu ke depannya.
+      </p>
 
-        <div class="hero-content">
-
-            <span class="badge">
-                Smart Mountain Tourism
-            </span>
-
-            <h1>
-                SegaraArga
-            </h1>
-
-            <p>
-                📍 Sentul, Bogor
-            </p>
-
+      <div class="question-box">
+        <p>Apakah kamu bersedia memaafkanku?</p>
+        <div class="button-area" id="buttonArea">
+          <button class="btn btn-forgive" id="forgiveBtn">Maafkan Aku ♡</button>
+          <button class="btn btn-no" id="noBtn">Belum Memaafkan</button>
         </div>
+      </div>
 
+      <p class="hint" id="hint">Tidak apa-apa kalau kamu masih butuh waktu. Aku tetap menghargai perasaanmu.</p>
+      <div class="success-message" id="successMessage" hidden>
+        <span class="success-icon">♡</span>
+        <h2>Terima kasih, Seva!</h2>
+        <p>Aku akan menjaga kepercayaan ini dan berusaha menjadi lebih baik.</p>
+      </div>
+
+      <p class="signature">— Muqri Hajid Hafuza</p>
     </section>
+  </main>
 
-    <main class="container-app">
-
-        <!-- CAPACITY -->
-
-        <div class="dashboard-card">
-
-            <div class="flex justify-between">
-
-                <span>
-                    Kapasitas Area Camping
-                </span>
-
-                <span id="capacityText">
-                    65%
-                </span>
-
-            </div>
-
-            <div class="progress">
-
-                <div
-                    id="capacityBar"
-                    class="progress-fill">
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- WEATHER -->
-
-        <div class="dashboard-card">
-
-            <h3 class="card-title">
-                🌦 Cuaca Hari Ini
-            </h3>
-
-            <div class="weather-box">
-
-                <div>
-
-                    <h2>
-                        18°C
-                    </h2>
-
-                    <p>
-                        Berkabut Ringan
-                    </p>
-
-                </div>
-
-                <div class="weather-icon">
-                    ☁️
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- TRACK -->
-
-        <div class="dashboard-card">
-
-            <h3 class="card-title">
-                🥾 Jalur Pendakian
-            </h3>
-
-            <ul class="track-list">
-
-                <li>Pos 1 - 1 KM</li>
-                <li>Pos 2 - 2.5 KM</li>
-                <li>Pos 3 - 4 KM</li>
-                <li>Puncak - 5 KM</li>
-
-            </ul>
-
-        </div>
-
-        <!-- MENU FITUR -->
-
-        <section>
-
-            <h2 class="section-title">
-                Fasilitas Wisata
-            </h2>
-
-            <div class="menu-grid">
-
-                <div class="menu-card">
-
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800">
-
-                    <div class="menu-overlay">
-                        <h3>Kantin</h3>
-                    </div>
-
-                </div>
-
-                <div class="menu-card">
-
-                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800">
-
-                    <div class="menu-overlay">
-                        <h3>Camping</h3>
-                    </div>
-
-                </div>
-
-                <div class="menu-card">
-
-                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800">
-
-                    <div class="menu-overlay">
-                        <h3>Porter</h3>
-                    </div>
-
-                </div>
-
-                <div class="menu-card">
-
-                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800">
-
-                    <div class="menu-overlay">
-                        <h3>Spot Foto</h3>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- BOOKING CAMP -->
-
-        <section>
-
-            <h2 class="section-title">
-                🏕 Booking Area Kemah
-            </h2>
-
-            <div class="booking-card">
-
-                <img
-                    src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200">
-
-                <div class="booking-content">
-
-                    <h3>
-                        Area Camping Bukit Pinus
-                    </h3>
-
-                    <p>
-                        Slot Tersedia :
-                        <span id="slotTersedia">
-                            24 Slot
-                        </span>
-                    </p>
-
-                    <p>
-                        Rp50.000 / malam
-                    </p>
-
-                    <button
-                        onclick="openBookingModal()"
-                        class="booking-btn">
-
-                        Booking Sekarang
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- MENU MAKANAN -->
-
-        <section>
-
-            <h2 class="section-title">
-                🍜 E-Menu Digital
-            </h2>
-
-            <div id="menuContainer">
-
-            </div>
-
-        </section>
-
-        <!-- PRO -->
-
-        <div class="pro-card">
-
-            <div class="flex justify-between items-center">
-
-                <div>
-
-                    <h3>
-                        SegaraArga PRO
-                    </h3>
-
-                    <p>
-                        Offline Maps & AI Guide
-                    </p>
-
-                </div>
-
-                <span class="pro-badge">
-                    PRO
-                </span>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- SOS -->
-
-    <button
-        id="panicBtn"
-        class="panic-btn">
-
-        🚨
-
-    </button>
-
-    <!-- BOOKING MODAL -->
-
-    <div
-        id="bookingModal"
-        class="modal hidden">
-
-        <div class="modal-box">
-
-            <h2>
-                Booking Area Kemah
-            </h2>
-
-            <input
-                id="namaPendaki"
-                class="form-input"
-                type="text"
-                placeholder="Nama Pendaki">
-
-            <input
-                id="tanggalBooking"
-                class="form-input"
-                type="date">
-
-            <input
-                id="jumlahOrang"
-                class="form-input"
-                type="number"
-                placeholder="Jumlah Orang">
-
-            <button
-                onclick="prosesBooking()"
-                class="upgrade-btn">
-
-                Booking via WhatsApp
-
-            </button>
-
-            <button
-                onclick="closeModal()"
-                class="close-btn">
-
-                Tutup
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- SOS MODAL -->
-
-    <div
-        id="sosModal"
-        class="modal hidden">
-
-        <div class="modal-box">
-
-            <h2>
-                🚨 Bantuan Darurat
-            </h2>
-
-            <button class="modal-btn red">
-                Hubungi Ranger
-            </button>
-
-            <button class="modal-btn blue">
-                Peta Lokasi
-            </button>
-
-            <button class="modal-btn green">
-                Pos P3K
-            </button>
-
-            <button
-                onclick="closeModal()"
-                class="close-btn">
-
-                Tutup
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- NAV -->
-
-    <nav class="bottom-nav">
-
-        <button>🏠</button>
-        <button>🥾</button>
-        <button>🏕</button>
-        <button>👤</button>
-
-    </nav>
-
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
